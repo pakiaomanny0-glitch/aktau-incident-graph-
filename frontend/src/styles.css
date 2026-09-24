@@ -168,7 +168,7 @@ h2 {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 14px;
   margin-bottom: 28px;
 }
@@ -198,6 +198,10 @@ h2 {
 
 .stat.danger strong {
   color: #d45f57;
+}
+
+.stat.critical strong {
+  color: #9d2b2b;
 }
 
 .stat.warning strong {
@@ -274,6 +278,11 @@ td small {
   background: #dcf4e6;
 }
 
+.badge.critical {
+  color: #ffffff;
+  background: #9d2b2b;
+}
+
 .filters {
   display: flex;
   gap: 10px;
@@ -330,6 +339,11 @@ td small {
   background: #d45f57;
 }
 
+.marker.critical {
+  background: #9d2b2b;
+  box-shadow: 0 0 0 9px rgb(157 43 43 / 30%);
+}
+
 .graph {
   border-radius: 0 0 10px 10px;
   background: radial-gradient(circle, #eef8f2, #dceae4);
@@ -369,6 +383,11 @@ td small {
 
 .graph-node.high {
   background: #d45f57;
+}
+
+.graph-node.critical {
+  background: #9d2b2b;
+  box-shadow: 0 0 0 5px rgb(157 43 43 / 25%);
 }
 
 .empty,
@@ -500,4 +519,4 @@ td small {
   .map {
     height: 430px;
   }
-}
+  }
