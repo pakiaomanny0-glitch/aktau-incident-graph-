@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from database import engine, Base
 import models  # noqa: F401 (кестелерді Base.metadata-ға тіркеу үшін импорт керек)
-from routers import ingest, incidents, graph
+from routers import ingest, incidents, graph, analyze
 
 # Кестелерді автоматты құру (алғашқы деплой үшін жеткілікті; production-да Alembic ұсынылады)
 Base.metadata.create_all(bind=engine)
@@ -26,6 +26,7 @@ app.add_middleware(
 app.include_router(ingest.router)
 app.include_router(incidents.router)
 app.include_router(graph.router)
+app.include_router(analyze.router)
 
 
 @app.get("/")
